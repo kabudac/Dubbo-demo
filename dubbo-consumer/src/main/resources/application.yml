@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: dubbo-consumer
+server:
+  port: 8000
+
+dubbo:
+  registry:
+    timeout: 5000
+    address: zookeeper://127.0.0.1:12181
+    file: ${user.home}/dubbo-cache/${spring.application.name}/dubbo.cache
+  config-center:
+    timeout: 5000
+  metadata-report:
+    timeout: 5000
+  provider:
+    version: 1.0.0
