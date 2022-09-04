@@ -11,7 +11,11 @@ dubbo:
     file: ${user.home}/dubbo-cache/${spring.application.name}/dubbo.cache
   config-center:
     timeout: 5000
+    address: zookeeper://127.0.0.1:12181
   metadata-report:
     timeout: 5000
+    address: zookeeper://127.0.0.1:12181
   provider:
     version: 1.0.0
+  application:
+    register-mode: instance
